@@ -1,0 +1,15 @@
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/home/antoni/.asdf/installs/ruby/3.0.0/bin/ruby -I /home/antoni/.asdf/installs/ruby/3.0.0/lib/ruby/3.0.0 -r ./siteconf20230615-1297-dainuj.rb extconf.rb
+creating Makefile
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20230615-1297-ei6az2/skiptrace/internal

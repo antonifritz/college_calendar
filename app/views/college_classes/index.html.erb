@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>College classes</h1>
+
+<div id="college_classes">
+  <% @college_classes.each do |college_class| %>
+    <%= render college_class %>
+    <p>
+      <%= link_to "Show this college class", college_class %>
+    </p>
+  <% end %>
+</div>
+
+<% if user_signed_in? && current_user.is_admin? %>
+<%= link_to "New college class", new_college_class_path %>
+<% end %>

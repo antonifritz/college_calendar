@@ -1,0 +1,16 @@
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+/home/antoni/.asdf/installs/ruby/3.0.0/bin/ruby -I /home/antoni/.asdf/installs/ruby/3.0.0/lib/ruby/3.0.0 -r ./siteconf20230615-2006-dv2rmd.rb extconf.rb
+creating Makefile
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make "DESTDIR=" clean
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make "DESTDIR="
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/antoni/psim/college_calendar/vendor/bundle/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230615-2006-33n02b/debug

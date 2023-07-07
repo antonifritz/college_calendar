@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @college_class %>
+
+<% if user_signed_in? && current_user.is_admin? %>
+<div>
+  <%= link_to "Edit this college class", edit_college_class_path(@college_class) %> |
+  <%= button_to "Destroy this college class", @college_class, method: :delete %>
+</div>
+<% end %>

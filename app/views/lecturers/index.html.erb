@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lecturers list</h1>
+
+<div id="lecturers">
+  <% @lecturers.each do |lecturer| %>
+    <%= render lecturer %>
+    <p>
+      <%= link_to "Show this lecturer", lecturer %>
+    </p>
+  <% end %>
+</div>
+
+<% if user_signed_in? && current_user.is_admin? %>
+<div class="d-flex justify-content-start mt-3">
+  <%= link_to "New lecturer", new_lecturer_path %>
+</div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 1
+  start_time: 2023-06-15 14:59:48
+  end_time: 2023-06-15 14:59:48
+  lecturer: one
+  course: one
+  room: one
+
+two:
+  day: 1
+  start_time: 2023-06-15 14:59:48
+  end_time: 2023-06-15 14:59:48
+  lecturer: two
+  course: two
+  room: two

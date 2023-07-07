@@ -1,0 +1,50 @@
+<%= form_with(model: college_class) do |form| %>
+  <% if college_class.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(college_class.errors.count, "error") %> prohibited this college_class from being saved:</h2>
+
+      <ul>
+        <% college_class.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :day, style: "display: block" %>
+    <%= form.select :day, (1..7).to_a, required: true, class: "form-control", style: "width: 100px;"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :start_time, style: "display: block" %>
+    <%= form.time_field :start_time, required: true, class: "form-control", style: "width: 100px;"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :end_time, style: "display: block" %>
+    <%= form.time_field :end_time, required: true, class: "form-control", style: "width: 100px;" %>
+  </div>
+
+  <% if current_user.is_admin? %>
+  <div class="form-group">
+    <%= form.label :lecturer, style: "display: block" %>
+    <%= form.collection_select :lecturer_id, Lecturer.order(:name), :id, :last_name, required: true, class: "form-control", style: "width: 100px;" %>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :course, style: "display: block" %>
+    <%= form.collection_select :course_id, Course.includes(:course_type).order(:name), :id,
+     lambda { |course| "#{course.name} (#{course.course_type.name})" }, required: true, class: "form-control", style: "width: 100px;"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :room, style: "display: block" %>
+    <%= form.collection_select :room_id, Room.order(:number), :id, :number, required: true, class: "form-control", style: "width: 100px;"  %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
